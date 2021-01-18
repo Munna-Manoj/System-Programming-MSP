@@ -1,0 +1,132 @@
+--------------------------------File Handling Utilities----------------------------------------------------
+
+1. mkdir
+syntax: mkdir <dirname_with_location>
+explanation: It stands for make directory. It helps to create an empty directory in an specified path. Directory is like a box to store other files and directories.
+eg: mkdir Movies
+
+2. cd
+syntax: cd <dirname>
+Explanation: cd stands for change directory. It helps us to change the directory from current directory to specified directory.
+eg: cd C:\Users\pande\Desktop
+
+3. rmdir
+syntax: rmdir <dirname>
+Explanation: It delets the empty directory. If you try to delete the non-empty directory, It will give an error message.
+eg: rmdir Movies
+
+4. rm
+syntax: rm <filename/Directory name>
+Explanation: It can easily deletes the files from the location. However, In order to deletes the directory, we need little extra commands.
+
+------deleting the directory--------
+syntax: rm -r Desktop
+Explanation: -r means recursively. It deletes the directory even if they are not empty.
+
+--------forcebly deleting something------
+syntax: rm -f <filename>
+Explanation: This command forcibly deletes the file.
+eg: rm -f Hello.exe
+
+syntax: rm -rf <directory_name>
+Explanation: Forcibly deletes the directory that are not empty.
+eg: rm -rf Linux/
+
+5. touch
+syntax: touch <file_1> <file_2> ......<file_n>
+Explanation: The touch command creates several empty 0 bytes files. These empty files can be used later.
+eg: touch file1 file2 file3
+
+6. ls 
+syntax: ls 
+Explanation: This displays the names of files and directories  
+
+----------------ls with options--------------------------
+option -> -l 
+syntax: ls -l  
+Explanation: Displays long list of files and directories. That is it gives the complete information of the all the files and directories in the given location.
+The order is: Permission | Owner | Size | Data and Time of Creation  
+
+
+option -> -t
+syntax: ls -t  
+Explanation: This command sorts the file and directories based on the time of modification  
+
+
+option -> -a 
+syntax: ls -a 
+Explanation: This shows all the files and directories that are hidden. Any files or folders that begins with . are hidden directories. eg: .Munna
+
+
+
+7. cat
+syntax: cat > <filename>
+Explanation: This will let you to fill the file with the content you want and save it. 
+            In order to exit from input mode, Ctrl + D 
+
+eg: cat > munna.txt 
+I will be here for long long time. 
+I will see through it. 
+I am the boss. I 
+here 
+Thank you.
+
+@ The above entered will be saved in munna.txt
+
+8. head
+syntax: head <filename>
+Explanation: This will show the first few lines of the given file name. The default is first 10 lines. 
+
+eg: head munna.txt 
+
+------------head with parameters --------------------------------------
+syntax: head -n <filename>
+Explanation: here, n will only show the n first n lines from the given file name. 
+
+syntax: head -nc <filename>
+Explanation: here, n will show n first character from the given file name.
+
+9. tail  
+syntax: tail <file name>
+Explanation: This will show the content in the end of the given file name. The default is last 10 lines. 
+eg. tail munna.txt
+
+----------------tail with parameters-------------------------------------
+Actually, this is same as head
+
+@!@
+syntax: tail -n <file_name>
+Explantion: this will show the last n lines of the given file name.
+
+syntax: tail -nc <file_name>
+Explanation: This will show the last n character of the given file name.
+
+10. nl
+syntax: nl <file_name>
+Explanation: This command dispalys the content of file name along with the line number in it.
+eg: nl munna.txt
+
+
+11. WC   
+syntax: wc [options] <filenames>
+Explanations: It displays the new line count, word count, bytes and the number of characters in a file, as specified by the file arguments. 
+
+options: 
+@ wc -l : prints the number of lines in a file 
+@ wc -w: prints the number of words in the file
+@ wc -c: displays the number of bytes in a file 
+@ wc -m: displays the number of character in a file 
+
+eg: wc munna.txt 
+eg: wc -l munna.txt 
+eg: wc -w munna.txt 
+eg: wc -c munna.txt
+eg: wc -m munna.txt 
+
+
+12. Copy
+syntax: cp <source file> <destination file>
+Explanations: This copies data from one file to another or to a directory. To copy contents from directories, we need to use -r flag i.e recursively. 
+eg: cp file1 file2 
+eg: cp file1 file2 Files/
+Explanation: while coping multiple files to a directory, the directory must exists.

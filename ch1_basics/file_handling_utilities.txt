@@ -127,6 +127,7 @@ eg: wc -m munna.txt
 12. Copy
 syntax: cp <source file> <destination file>
 Explanations: This copies data from one file to another or to a directory. To copy contents from directories, we need to use -r flag i.e recursively. 
+While copying files from one directory to other, it will recursively copy the files not the whole folder by itself.
 eg: cp file1 file2 
 eg: cp file1 file2 Files/
 Explanation: while coping multiple files to a directory, the directory must exists.

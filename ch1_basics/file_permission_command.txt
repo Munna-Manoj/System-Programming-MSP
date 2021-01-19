@@ -1,0 +1,65 @@
+------------------------------File permission command------------------------------------------------
+These commands will help to configure the file access rights like read, write or execute to a particular file.
+u - users/Owner
+g -group
+o - other people(from the outside world)
+
+
+@!@
+when we type: ls -l 
+It will show the persmission mode in the beginning, 
+The first line either begins with "-" or "d"
+"-" stands for file
+"d" stands for directory
+
+--------------------------------octal representation-------------------------
+The order of permission is read(r), write(w), execute(x).
+Octal   Binary   permission
+0       000       ---
+1       001       --x
+2       010       -w-
+3       011       -wx
+4       100       r--
+5       101       r-x
+6       110       rw-
+7       111       rwx
+
+
+1. chmod
+syntax -> chmod [who] [+/-/=] [permissions] <filename>
+Explanation: This grands permission for files and directories. 
+
+------------------------what is [who]?-----------------
+[who]
+u -> users. The owner of file or directory. 
+g -> group. These are group of people who have same access permission for a file.
+o -> other. The one that is not users or group. It represent the world to use the data.
+a -> all. It includes u,g,o.
+
+
+--------------------what is [+/-/=]---------------------
++ -> adds permission to  a file or directory
+- -> removes permission to a file or directory
+= -> add specified permission and removes all others, if there are any. 
+
+-------------------------How to use?---------------------------
+eg. chmod +rw myContent.txt  
+Explanation: Since ugo is not mentioned, It means we are refering to all. Here "+" means add, "rw" means read and write.
+So, It means give read and write permission to all for file myContent.txt 
+
+eg. chmod ug+r, go-w myContent.txt
+Explanation: ug+r means give read permission to users and group. go-w means take away write permission from group and others.
+
+eg. chmod go=w, u=rwx myContext.txt
+Explanation: "=" means remove all the permissions for that file. Then, give write permission to group and others.
+Furthermore, Give read, write and execute option to users. 
+
+------------------------Using with weights------------------------
+As I have mentioned before, We can use octal numbering for permission. 
+The order will be, 
+Users Group others
+eg. chmod 367 hello.txt
+Explanation: 
+Here, 3 is for Users or owners. 3(011) means -wx i.e only give write and execute permission to owners.
+Here, 6 is for group. 6(110) means rw- i.e only give read and write permission to groups.
+here, 7 is for others. 7(111) means rwx i.e give all read, write and execute permission to world for that file.

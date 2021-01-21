@@ -1,0 +1,37 @@
+-------------------------------------------------------------Network Utilities--------------------------------------------------------
+1. ifconfig 
+syntax: ifconfig 
+Explanation: Shows us the network configuration information. Shows transmit(TX) or receive(RX) errors as well. 
+
+2. hostname 
+syntax: hostname 
+Explanation: It shows the hostname of the computer. We can change the hostname by going to the system configuration. 
+ 
+3. netstat
+syntax: netstat 
+Explanation: It identifies the open and closed ports in a network. It is very helpful for finding connections to and from the host. 
+I don't fully understand the use of this command. I will update it once I will use or know it's practicality. 
+ 
+
+ ---------------------------netstat -flag ----------------------------------------
+ a. -g flag 
+ syntax: netstat -g 
+ Explanation: It shows all the multicast groups subscribed to the current working host machine. 
+ Multicast means the at each router, a copy of request is made to fulfill the multiple request of the incoming data. 
+ @ Note: Much clearer description is needed, 
+
+ b. -a flag 
+ syntax: netstat -a 
+ Explanation: Displays all the active TCP and UDP connections, including servers. 
+
+ -----------------------------------------------------------------------------------------------
+
+ 4. nslookup 
+ syntax: nslookup youtube.com 
+ Explanation: nslook stands for name server lookup. It troubleshoots all DNS(Domain Name Server). It finds out all the IP addresses for a given domain name. 
+
+eg. nslookup youtube.com 
+
+5. traceroute 
+syntax: traceroute netflix.com 
+Explanation: 
